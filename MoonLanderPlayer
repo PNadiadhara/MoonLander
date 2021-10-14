@@ -1,0 +1,31 @@
+function make_player()
+	p={}
+	p.x=60
+	p.y=8
+	p.dx=0
+	p.dy=0
+	p.sprite=1
+	p.alive=true
+	p.thrust=0.075
+end
+
+function draw_player()
+	spr(p.sprite,p.x,p.y)
+end
+
+function move_player()
+	p.dy+=g
+	thrust()
+	p.x+=p.dx		
+	p.y+=p.dy
+end
+
+function thrust()
+	if (btn(0)) p.dx-=p.thrust
+	if (btn(1)) p.dx+=p.thrust
+	if (btn(2)) p.dy-=p.thrust
+	
+	
+	if (btn(0) or btn(1) or btn(2)) sfx(0)
+
+end
