@@ -1,6 +1,7 @@
 function _init()
 	g=0.025 -- gravity
 	make_player()
+	make_ground()
 end
 
 function _update()
@@ -9,5 +10,7 @@ end
 
 function _draw()
 	cls()
+	draw_stars()
+	draw_ground()
 	draw_player()
 end
